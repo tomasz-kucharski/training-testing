@@ -34,7 +34,7 @@ public class MockitoTest {
 		LinkedList mockedList = mock(LinkedList.class);
 
 		when(mockedList.get(0)).thenReturn("first");
-		when(mockedList.get(1)).thenThrow(new RuntimeException());
+//		when(mockedList.get(1)).thenThrow(new RuntimeException());
 
 		log.debug("Element 0: " + mockedList.get(0));
 		log.debug("Element 1: " + mockedList.get(1));
