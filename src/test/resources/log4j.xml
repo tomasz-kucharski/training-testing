@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false">
+
+	<appender name="APPENDER_CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				   value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] [%c{1}] %m%n"/>
+		</layout>
+	</appender>
+
+	<logger name="org.springframework">
+		<level value="WARN"/>
+	</logger>
+
+	<logger name="org.hibernate">
+		<level value="INFO"/>
+	</logger>
+
+	<root>
+		<priority value="DEBUG"/>
+		<appender-ref ref="APPENDER_CONSOLE"/>
+	</root>
+
+</log4j:configuration>
